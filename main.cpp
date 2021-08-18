@@ -10,6 +10,12 @@ int main(int argc, char *argv[]) {
 	field.at(0).at(0).setType(BOMB);
 	std::cout << "This is minesweeper" << std::endl;
 
-	std::cout << field.at(0).at(0).getType() << std::endl;
+	for(int y=0; y < height; y++) {
+		for(int x=0; x < width; x++) {
+			std::cout << field.at(y).at(x).getType();
+		}
+		std::cout << std::endl;
+	}
+
 	return 0;
 }
