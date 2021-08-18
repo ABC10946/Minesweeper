@@ -1,7 +1,7 @@
 CXX = g++
 TARGET = minesweeper
 SRCS = main.cpp minesweeper.cpp
-CFLAGS = -Wall
+CXXFLAGS = -std=c++11 -Wall
 
 minesweeper: $(SRCS)
-	$(CXX) $(CFLAGS) $(SRCS) -o $(TARGET)
+	$(CXX) $(CXXFLAGS) $(SRCS) -o $(TARGET)
