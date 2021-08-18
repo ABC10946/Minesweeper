@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "minesweeper.hpp"
+#include "minesweeper.h"
 
 int main(int argc, char *argv[]) {
     int width = 30;

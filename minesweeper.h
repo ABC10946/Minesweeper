@@ -1,5 +1,5 @@
-#ifndef MINESWEEPER_HPP_
-#define MINESWEEPER_HPP_
+#ifndef MINESWEEPER_H_
+#define MINESWEEPER_H_
 
 #include <vector>
 
@@ -28,7 +28,6 @@ class Cell {
 class Field {
  private:
     std::vector<std::vector<Cell>> field;
-
  public:
     Field(int width, int height);
     std::vector<std::vector<Cell>> getField();
@@ -38,4 +37,4 @@ class Field {
     void changeCellType(int x, int y, CellType type);
 };
 
-#endif  // MINESWEEPER_HPP_
+#endif  // MINESWEEPER_H_

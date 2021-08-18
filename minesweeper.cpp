@@ -1,4 +1,4 @@
-#include "minesweeper.hpp"
+#include "minesweeper.h"
 #include <vector>
 
 Cell::Cell() {
