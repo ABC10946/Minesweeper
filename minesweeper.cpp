@@ -23,3 +23,28 @@ int Cell::getNum() {
 void Cell::setNum(int num_) {
 	num = num_;
 }
+
+
+Field::Field(int width, int height) {
+	field = std::vector<std::vector<Cell>>(height, std::vector<Cell>(width, Cell()));
+}
+
+std::vector<std::vector<Cell>> Field::getField() {
+	return field;
+}
+
+void Field::setField(std::vector<std::vector<Cell>> field_) {
+	field = field_;
+}
+
+Cell Field::getCell(int x, int y) {
+	return field.at(y).at(x);
+}
+
+void Field::setCell(int x, int y, Cell cell) {
+	field.at(y).at(x) = cell;
+}
+
+void Field::changeCellType(int x, int y, CellType type) {
+	field.at(y).at(x).setType(type);
+}
