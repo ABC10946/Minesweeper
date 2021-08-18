@@ -1,3 +1,6 @@
+#ifndef MINESWEEPER_H_
+#define MINESWEEPER_H_
+
 enum CellType {
         EMPTY,
         NUM,
@@ -17,3 +20,5 @@ public:
         int getNum();
         void setNum(int num_);
 };
+
+#endif
