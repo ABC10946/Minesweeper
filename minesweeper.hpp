@@ -15,6 +15,7 @@ private:
         CellType type;
 public:
         Cell();
+        Cell(CellType type_);
         CellType getType();
         void setType(CellType type_);
         int getNum();

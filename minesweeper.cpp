@@ -4,6 +4,10 @@ Cell::Cell() {
 	type = EMPTY;
 }
 
+Cell::Cell(CellType type_) {
+	type = type_;
+}
+
 CellType Cell::getType() {
 	return type;
 }
