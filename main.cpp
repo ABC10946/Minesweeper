@@ -12,8 +12,8 @@ int main(int argc, char *argv[]) {
     field.changeCellType(0, 2, NUM);
     std::cout << "This is minesweeper" << std::endl;
 
-    for(int y=0; y < height; y++) {
-        for(int x=0; x < width; x++) {
+    for (int y = 0; y < height; y++) {
+        for (int x = 0; x < width; x++) {
             std::cout << field.getCell(x, y).getType();
         }
         std::cout << std::endl;

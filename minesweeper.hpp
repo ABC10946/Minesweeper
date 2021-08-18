@@ -1,5 +1,5 @@
-#ifndef MINESWEEPER_H_
-#define MINESWEEPER_H_
+#ifndef MINESWEEPER_HPP_
+#define MINESWEEPER_HPP_
 
 #include <vector>
 
@@ -12,12 +12,12 @@ enum CellType {
 
 
 class Cell {
-private:
+ private:
     int num;
     CellType type;
-public:
+ public:
     Cell();
-    Cell(CellType type_);
+    explicit Cell(CellType type_);
     CellType getType();
     void setType(CellType type_);
     int getNum();
@@ -26,10 +26,10 @@ public:
 
 
 class Field {
-private:
+ private:
     std::vector<std::vector<Cell>> field;
 
-public:
+ public:
     Field(int width, int height);
     std::vector<std::vector<Cell>> getField();
     void setField(std::vector<std::vector<Cell>> field_);
@@ -38,4 +38,4 @@ public:
     void changeCellType(int x, int y, CellType type);
 };
 
-#endif
+#endif  // MINESWEEPER_HPP_
