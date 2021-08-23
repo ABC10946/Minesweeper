@@ -35,6 +35,7 @@ class Field {
     Cell getCell(int x, int y);
     void setCell(int x, int y, Cell cell);
     void changeCellType(int x, int y, CellType type);
+    int setNumCell(int x, int y);
 };
 
 #endif  // MINESWEEPER_H_

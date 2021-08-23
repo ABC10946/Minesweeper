@@ -49,3 +49,40 @@ void Field::setCell(int x, int y, Cell cell) {
 void Field::changeCellType(int x, int y, CellType type) {
     _field.at(y).at(x).setType(type);
 }
+
+int Field::setNumCell(int x, int y) {
+    if (_field.at(y).at(x).getType() == BOMB)
+        return -1;
+
+    int bomb_num = 0;
+
+    if (_field.at(y-1).at(x-1).getType() == BOMB)
+        bomb_num++;
+
+    if (_field.at(y-1).at(x).getType() == BOMB)
+        bomb_num++;
+
+    if (_field.at(y-1).at(x+1).getType() == BOMB)
+        bomb_num++;
+
+    if (_field.at(y).at(x-1).getType() == BOMB)
+        bomb_num++;
+
+    if (_field.at(y).at(x+1).getType() == BOMB)
+        bomb_num++;
+
+    if (_field.at(y+1).at(x-1).getType() == BOMB)
+        bomb_num++;
+
+    if (_field.at(y+1).at(x).getType() == BOMB)
+        bomb_num++;
+
+    if (_field.at(y+1).at(x+1).getType() == BOMB)
+        bomb_num++;
+
+    if (bomb_num > 0) {
+        _field.at(y).at(x).setNum(bomb_num);
+        _field.at(y).at(x).setType(NUM);
+    }
+    return 0;
+}
