@@ -25,6 +25,14 @@ void Cell::setNum(int num) {
     _num = num;
 }
 
+CellStatus Cell::getStatus() {
+    return _status;
+}
+
+void Cell::setStatus(CellStatus status) {
+    _status = status;
+}
+
 
 Field::Field(int width, int height) {
     _field = std::vector<std::vector<Cell>>(height, std::vector<Cell>(width, Cell()));

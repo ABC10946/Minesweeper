@@ -10,11 +10,17 @@ enum CellType {
     FLAG
 };
 
+enum CellStatus {
+    HIDDEN,
+    VISIBLE
+};
+
 
 class Cell {
  private:
     int _num;
     CellType _type;
+    CellStatus _status;
  public:
     Cell();
     explicit Cell(CellType type);
@@ -22,6 +28,8 @@ class Cell {
     void setType(CellType type);
     int getNum();
     void setNum(int num);
+    CellStatus getStatus();
+    void setStatus(CellStatus status);
 };
 
 
